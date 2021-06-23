@@ -10,14 +10,14 @@ import { AdminService } from 'src/app/services/admin.service';
 })
 export class AddAccountantComponent implements OnInit {
   errorMsg: boolean=false
-  admin={adminId:1}
+ 
   accountantObj={accountantId: null,
     address: null,
     contact: null,
     emailId: null,
     name: null,
-    password: null,
-  admin: this.admin}
+    password: null
+ }
   //adminService: any;
   constructor(private router: Router, private adminService: AdminService) { }
 
@@ -29,7 +29,7 @@ export class AddAccountantComponent implements OnInit {
 add(accountant:NgForm){
   //  console.log(this.accountantObj)
     this.accountantObj=accountant.value
-   this.accountantObj["admin"]=this.admin
+  
    console.log(this.accountantObj)
     this.adminService.addAccountant(this.accountantObj).subscribe((response) => {
       //console.log(response)

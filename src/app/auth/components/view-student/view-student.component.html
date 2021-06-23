@@ -46,9 +46,8 @@
 
 
 <h1>View Students</h1>
-<table datatable  class="row-border hover">
-  <form #deleteForm="ngForm">
-    <table>
+<form #deleteForm="ngForm">
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
  
   <thead>
     <tr>
@@ -67,24 +66,21 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let student of accountantStudents">
-      <td>{{ student?.rollno }}</td>
-      <td>{{ student?.name }}</td>
-      <td>{{ student?.email }}</td>
+    <tr *ngFor="let student of students">
+      <td>{{ student?.studentId }}</td>
+      <td>{{ student?.studentName}}</td>
+      <td>{{ student?.emailId }}</td>
       <td>{{ student?.gender }}</td>
       <td>{{ student?.course }}</td>
       <td>{{ student?.fee }}</td>
       <td>{{ student?.paid }}</td>
-      <td>{{ student?.due }}</td>
-      <td>{{ student?.address }}</td>
-      <td>{{ student?.contact }}</td>
-     <td><a class="btn" routerLink="/edit-student">EDIT</a><br></td> 
-        <!--<td><a class="btn" routerLink="/delete-student">DELETE</a></td>-->
-        <!--<td><button (click) = "deleteStudent(student.rollno)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button></td>-->
-        <td><input class="submit" type="submit" value="Delete" (click)="student(deleteForm)"></td>
+      <td>{{ student?.duefees}}</td>
+      <td>{{ student?.address}}</td>
+      <td>{{ student?.contactno }}</td>
+      <td><a class="btn" routerLink="/edit-student">EDIT</a><br></td> 
+        <td><a class="btn" routerLink="/delete-student">DELETE</a></td>
       </tr>
   </tbody>
 
 </table>
 </form>
-</table>

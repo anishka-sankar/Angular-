@@ -10,27 +10,24 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./view-student.component.css']
 })
 export class ViewStudentComponent implements OnInit {
- accountantStudents: any[] = [];
- currentAccountant : string = '';
- constructor(private service: StudentService, private router: ActivatedRoute) { }
+  title = 'datatables';
+  dtOptions: DataTables.Settings = {};
+  students: any;
+ constructor(private http: HttpClient) { }
 
  ngOnInit(): void {
-  this.currentAccountant = this.router.snapshot.params.accountantname;
-  this.service.getAllStudentsOfAAccountant(this.currentAccountant)
-    .subscribe(response => {
-      this.accountantStudents = response as any[];
-    }, error => {
-      console.log(error);
+  this.dtOptions = {
+    pagingType: 'full_numbers',
+    pageLength: 5,
+    processing: true
+}
+
+this.http.get('http://localhost:8081/accountantlogin/studentDetails')
+
+      .subscribe((students) => {
+        this.students = students;
     });
-   
-}
-
-student(deleteForm:NgForm)
-{
-  console.log(deleteForm.value, deleteForm.valid);
 
 }
 
 }
-
-

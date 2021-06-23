@@ -14,8 +14,8 @@ export class AccountantService {
     return this.http.get(this.apiUrl + '/accountantlogin/' + '/'+accountantName+ '/' + accountantPassword );
   }
 
-  addStudent(student:any, accountantId:any){
-    return this.http.post(this.apiUrl + 'accountantlogin/' + accountantId+ '/' + 'addStudent', student);
+  addStudent(student:any){
+    return this.http.post(this.apiUrl + '/accountantlogin/addStudent', student);
    
   }
 }
