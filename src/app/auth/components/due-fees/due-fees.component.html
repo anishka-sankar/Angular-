@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Accountant Panel</a>
+      <button class="navbar-toggler"
+       type="button"
+        data-bs-toggle="collapse"
+         data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" 
+      id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/add-student']" routerLinkActive="active">Add Student </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/view-student']" routerLinkActive="active">View Student</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/search-student']" routerLinkActive="active">Search Student</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/due-fees']" routerLinkActive="active">View Dues</a>
+          </li>
+          
+          
+          
+         </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  
+  
+  <h1>Students with Due Fees</h1>
+  <!--<table datatable [dtOptions]="dtOptions" class="row-border hover">-->
+   <!--<form #deleteForm="ngForm">--> 
+      <table>
+   
+    <thead>
+      <tr>
+        <th>Rollno</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Fee</th>
+        <th>Paid</th>
+        <th>due</th>
+        <th>Address</th>
+        <th>Contact</th>
+      <!--<th>Edit</th>-->  
+      <!--<th>Delete</th>--> 
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let student of accountantStudents">
+          <tr *ngIf='student.due!=0'>
+        <td>{{ student?.rollno }}</td>
+        <td>{{ student?.name }}</td>
+        <td>{{ student?.email }}</td>
+        <td>{{ student?.gender }}</td>
+        <td>{{ student?.course }}</td>
+        <td>{{ student?.fee }}</td>
+        <td>{{ student?.paid }}</td>
+        <td>{{ student?.due }}</td>
+        <td>{{ student?.address }}</td>
+        <td>{{ student?.contact }}</td>
+     <!--  <td><a class="btn" routerLink="/edit-student">EDIT</a><br></td> -->
+          <!--<td><a class="btn" routerLink="/delete-student">DELETE</a></td>-->
+          <!--<td><button (click) = "deleteStudent(student.rollno)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button></td>-->
+         <!-- <td><input class="submit" type="submit" value="Delete" (click)="student(deleteForm)"></td> -->       </tr>  
+        </ng-container>
+    </tbody>
+  
+  </table>
+  <!--</form>-->

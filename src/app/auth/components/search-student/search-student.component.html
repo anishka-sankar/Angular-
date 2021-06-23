@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Accountant Panel</a>
+      <button class="navbar-toggler"
+       type="button"
+        data-bs-toggle="collapse"
+         data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" 
+      id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/add-student']" routerLinkActive="active">Add Student </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/view-student']" routerLinkActive="active">View Student</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/search-student']" routerLinkActive="active">Search Student</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/due-fees']" routerLinkActive="active">View Dues</a>
+          </li>
+          
+          
+          
+         </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-4">
+	<h1>Search Student </h1><br>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    
+	<div class="form-group">
+		<label for="search">Rollno     :</label>
+		<input #name="ngModel" required name="search"id="search" type="number"  class="form-control" ngModel>
+		
+		
+	</div><br>
+	<button class="btn btn-primary" type="submit">Search Student</button>	
+</form>
+</div>

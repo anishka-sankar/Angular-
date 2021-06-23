@@ -1,0 +1,42 @@
+<div class="row">
+ <!-- <app-add-student [id]="data"></app-add-student>-->
+    <div class="col-md-6 offset-md-3 mt-4">
+        <h3>Accountant Login</h3>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <div class="mb-3">
+              <label for="accountantUsername" class="form-label">Username</label>
+              <input type="text" 
+              name="username"
+              ngModel 
+              required 
+              #username="ngModel"
+              class="form-control"
+               id="accountantUsername"
+                placeholder="Enter accountant Username">
+              
+            </div>
+            <div class="mb-3">
+              <label for="accountantPassword" class="form-label">Password</label>
+              <input type="password" 
+              name="password"
+                ngModel
+                 required 
+                 #password="ngModel"
+              class="form-control"
+               id="accountantPassword"
+               placeholder="Enter accountant Password">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" [disabled]="f.invalid"  
+            class="btn btn-primary"
+            >Login</button>
+          </form>
+
+          <div class="alert alert-danger" role="alert" *ngIf="errorMsg">
+            Invalid credentials !!
+          </div>
+    </div>
+</div>
