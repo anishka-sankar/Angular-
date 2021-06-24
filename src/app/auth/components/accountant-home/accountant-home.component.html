@@ -1,57 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Accountant Panel</a>
-      <button class="navbar-toggler"
-       type="button"
-        data-bs-toggle="collapse"
-         data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" 
-      id="navbarNavDropdown">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Accountant Panel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+   
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          
-          
+
+
           <li class="nav-item">
-            <a class="nav-link" 
-            [routerLink]="['/add-student']" routerLinkActive="active">Add Student </a>
+            <a class="nav-link" [routerLink]="['/add-student']" routerLinkActive="active">Add Student </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" 
-            [routerLink]="['/view-student']" routerLinkActive="active">View Student</a>
+            <a class="nav-link" [routerLink]="['/view-student']" routerLinkActive="active">View Student</a>
           </li>
-          
+
           <li class="nav-item">
-            <a class="nav-link" 
-            [routerLink]="['/search-student']" routerLinkActive="active">Search Student</a>
+            <a class="nav-link" [routerLink]="['/search-student']" routerLinkActive="active">Search Student</a>
           </li>
-          
+
           <li class="nav-item">
-            <a class="nav-link" 
-            [routerLink]="['/due-fees']" routerLinkActive="active">View Dues</a>
+            <a class="nav-link" [routerLink]="['/due-fees']" routerLinkActive="active">View Dues</a>
           </li>
-          
-          
-          
-         </ul>
+
+
+
+        </ul>
       </div>
     </div>
-  </nav>
+</nav>
+
+<div class="bg-image" style="
+background-image: url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+height: 100vh; background-size : cover;">
 
 
+<a class="btn" routerLink="/add-student">Add Student</a><br>
+<a class="btn" routerLink="/view-student">View Student</a><br>
+
+<a class="btn" routerLink="/search-student">Search Student</a><br>
+
+<a class="btn" routerLink="/due-fees">View dues</a>
 
 
-  <a class="btn" routerLink="/add-student">Add Student</a><br>
-  <a class="btn" routerLink="/view-student">View Student</a><br>
-  
-  <a class="btn" routerLink="/search-student">Search Student</a><br>
-  
-  <a class="btn" routerLink="/due-fees">View dues</a>
-  
-
-
-
-
+</div>

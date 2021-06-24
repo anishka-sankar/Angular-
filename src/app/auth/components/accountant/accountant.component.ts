@@ -19,7 +19,7 @@ export class AccountantComponent implements OnInit {
   }
 
   onSubmit(f: NgForm) {
-    this.accountantService.getAccountantId(f.value.username, f.value.password).subscribe(response => {
+    this.accountantService.getAccountantId(f.value.emailId, f.value.password).subscribe(response => {
       console.log(response)
       this.data =response;
       console.log(this.data.accountantId)

@@ -1,18 +1,24 @@
+<div
+  class="bg-image"
+  style="
+    background-image: url('https://us.123rf.com/450wm/phongphan/phongphan1701/phongphan170100147/70753309-stock-market-indicator-and-financial-data-view-from-led-double-exposure-financial-graph-and-stock-in.jpg?ver=6');
+    height: 100vh; background-size : cover;">
+
 <div class="row">
  <!-- <app-add-student [id]="data"></app-add-student>-->
     <div class="col-md-6 offset-md-3 mt-4">
         <h3>Accountant Login</h3>
         <form #f="ngForm" (ngSubmit)="onSubmit(f)">
             <div class="mb-3">
-              <label for="accountantUsername" class="form-label">Username</label>
+              <label for="accountantUsername" class="form-label">EmailId</label>
               <input type="text" 
-              name="username"
+              name="emailId"
               ngModel 
               required 
               #username="ngModel"
               class="form-control"
                id="accountantUsername"
-                placeholder="Enter accountant Username">
+                placeholder="Enter accountant EmailId">
               
             </div>
             <div class="mb-3">
@@ -39,4 +45,5 @@
             Invalid credentials !!
           </div>
     </div>
+</div>
 </div>

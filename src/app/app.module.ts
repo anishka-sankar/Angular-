@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-import { ServicesModule } from './services/services.module';
 import { DataTablesModule } from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
 import {MatRadioModule} from '@angular/material/radio';
@@ -42,7 +41,6 @@ import {MatRadioModule} from '@angular/material/radio';
     AppRoutingModule,
     SharedModule,
     AuthModule,
-    ServicesModule,
     DataTablesModule,
     //ReactiveFormsModule,
     //FormsModule,
