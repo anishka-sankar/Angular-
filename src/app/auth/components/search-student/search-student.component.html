@@ -58,5 +58,17 @@
 </form>
 
 <div class="alert alert-secondary" *ngIf="noresultsfound">No results found</div>
-<div *ngIf="!noresultsfound">{{student | json}}</div>
+<table>
+<div *ngIf="!noresultsfound">Student Id : {{student.studentId | json}}</div>
+<div *ngIf="!noresultsfound">Student Name : {{student.studentName | json}}</div>
+<div *ngIf="!noresultsfound">Email Id : {{student.emailId | json}}</div>
+<div *ngIf="!noresultsfound">Address : {{student.address | json}}</div>
+<div *ngIf="!noresultsfound">Contact no : {{student.contactNo | json}}</div>
+<div *ngIf="!noresultsfound">Course : {{student.course | json}}</div>
+<div *ngIf="!noresultsfound">fees : {{student.fee | json}}</div>
+<div *ngIf="!noresultsfound">fees paid : {{student.paid | json}}</div>
+<div *ngIf="!noresultsfound">Due fee : {{student.duefees | json}}</div>
+<div *ngIf="!noresultsfound">Gender : {{student.gender | json}}</div>
+</table>
+ 
 </div>

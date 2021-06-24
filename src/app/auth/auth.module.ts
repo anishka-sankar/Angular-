@@ -21,7 +21,7 @@ import { AddAccountantComponent } from './components/add-accountant/add-accounta
 import { HomeComponent } from './components/home/home.component';
 import { ViewAccountantComponent } from './components/view-accountant/view-accountant.component';
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
-import { EditAccountantComponent } from './components/edit-accountant/edit-accountant.component';
+//import { EditAccountantComponent } from './components/edit-accountant/edit-accountant.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
 import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 
@@ -40,7 +40,6 @@ import { DeleteStudentComponent } from './components/delete-student/delete-stude
     LogOutComponent,
     HomeComponent,
     EditStudentComponent,
-    EditAccountantComponent,
     SearchStudentComponent,
     DeleteStudentComponent,
     

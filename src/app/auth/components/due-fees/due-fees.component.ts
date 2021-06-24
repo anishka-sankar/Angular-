@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { StudentService } from 'src/app/services/student.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AccountantService } from 'src/app/services/accountant.service';
 
 @Component({
   selector: 'app-due-fees',
@@ -10,19 +11,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./due-fees.component.css']
 })
 export class DueFeesComponent implements OnInit {
-
-  accountantStudents: any[] = [];
- currentAccountant : string = '';
- constructor(private service: StudentService, private router: ActivatedRoute) { }
+  title = 'datatables';
+  dtOptions: DataTables.Settings = {};
+  students : any=[];
+ constructor(private http: HttpClient, private accountantService:AccountantService, private router:Router) { }
 
  ngOnInit(): void {
-  this.currentAccountant = this.router.snapshot.params.accountantname;
-  this.service.getAllStudentsOfAAccountant(this.currentAccountant)
-    .subscribe(response => {
-      this.accountantStudents = response as any[];
-    }, error => {
-      console.log(error);
-    })}
+  this.dtOptions = {
+    pagingType: 'full_numbers',
+    pageLength: 5,
+    processing: true
+}
+
+this.http.get('http://localhost:8081/accountantlogin/duefees')
+
+      .subscribe((students) => {
+        this.students = students;
+    });
+
+}
 
   
 
