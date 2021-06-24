@@ -18,4 +18,17 @@ export class AccountantService {
     return this.http.post(this.apiUrl + '/accountantlogin/addStudent', student);
    
   }
+
+  updatestudent(student: any){
+    return this.http.put(this.apiUrl + '/accountantlogin/update/'+student.studentId, student);
+  }
+
+  deletestudent(studentId: number){
+    console.log(studentId)
+    return this.http.delete(this.apiUrl + '/accountantlogin/delete/' + studentId,  {responseType: 'text'});
+  }
+
+  searchstudent(studentId: number){
+    return this.http.get(this.apiUrl + '/accountantlogin/' + studentId);
+  }
 }

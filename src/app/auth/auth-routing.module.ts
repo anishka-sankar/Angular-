@@ -14,6 +14,7 @@ import { ViewAccountantComponent } from './components/view-accountant/view-accou
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
 import { EditAccountantComponent } from './components/edit-accountant/edit-accountant.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
+import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,9 @@ const routes: Routes = [
   {path:'log-out',component:LogOutComponent},
   {path:'edit-student',component:EditStudentComponent},
   {path:'edit-accountant',component:EditAccountantComponent},
-  {path:'search-student',component:SearchStudentComponent}  
+  {path:'search-student',component:SearchStudentComponent}  ,
+  {path:'delete-student',component:DeleteStudentComponent}
+
   
 ];
 

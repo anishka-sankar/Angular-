@@ -46,14 +46,17 @@
     <div class="col-md-6 offset-md-3 mt-4">
 	<h1>Search Student </h1><br>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form #f="ngForm" >
     
 	<div class="form-group">
 		<label for="search">Rollno     :</label>
-		<input #name="ngModel" required name="search"id="search" type="number"  class="form-control" ngModel>
+		<input #name="ngModel" required name="studentId" id="search" type="number"  class="form-control" ngModel>
 		
 		
 	</div><br>
-	<button class="btn btn-primary" type="submit">Search Student</button>	
+	<button class="btn btn-primary" type="submit" (click)="search(f)">Search Student</button>	
 </form>
+
+<div class="alert alert-secondary" *ngIf="noresultsfound">No results found</div>
+<div *ngIf="!noresultsfound">{{student | json}}</div>
 </div>

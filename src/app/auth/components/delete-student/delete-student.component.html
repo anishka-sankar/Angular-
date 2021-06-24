@@ -1,0 +1,23 @@
+
+<body>
+    <fieldset class="accountantinput">
+        <legend>Delete Student</legend>
+        <form #deleteForm="ngForm">
+            <table>
+
+                <tr>
+                    <td><label for="studentId">Enter studentId</label> </td>
+                    <td><input class="element" type="text" name="studentId" placeholder="Enter student Id"
+                            required ngModel #delete="ngModel">
+
+                </tr>
+                <tr><td></td><td><mat-error *ngIf="delete.invalid && (delete.dirty || delete.touched)" >Enter Student ID</mat-error></td></tr>
+                <tr>
+                    <td></td>
+                    <td><input class="submit" type="submit" value="Delete" (click)="onDelete(deleteForm)"></td>
+                </tr>
+
+            </table>
+        </form>
+    </fieldset>
+</body>

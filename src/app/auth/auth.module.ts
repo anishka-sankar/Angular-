@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+
 import { AuthRoutingModule } from './auth-routing.module';
 import { AdminComponent } from './components/admin/admin.component';
 import { AccountantComponent } from './components/accountant/accountant.component';
@@ -22,6 +23,7 @@ import { ViewAccountantComponent } from './components/view-accountant/view-accou
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
 import { EditAccountantComponent } from './components/edit-accountant/edit-accountant.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
+import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { SearchStudentComponent } from './components/search-student/search-stude
     EditStudentComponent,
     EditAccountantComponent,
     SearchStudentComponent,
+    DeleteStudentComponent,
     
   ],
   imports: [

@@ -48,15 +48,19 @@
 
 		<form #update="ngForm">
 			<fieldset class="k11">
+				<div class="form-group">
+					<label for="name"> studentId :</label>
+					<input #name="ngModel" required name="studentId" id="name" type="text" class="form-control" [(ngModel)]="student.studentId" readonly>
+				</div> <br>
 
 				<div class="form-group">
 					<label for="name"> Name :</label>
-					<input #name="ngModel" required name="name" id="name" type="text" class="form-control" ngModel>
+					<input #name="ngModel" required name="studentName" id="name" type="text" class="form-control" [(ngModel)]="student.studentName">
 					<div *ngIf="name.touched && name.invalid" class="alert alert-danger"> Name is required </div>
 				</div> <br>
 				<div class="form-group">
 					<label for="email">e-mail :</label>
-					<input #name="ngModel" required name="email" id="email" type="text" class="form-control" ngModel>
+					<input #name="ngModel" required name="emailId" id="email" type="text" class="form-control" [(ngModel)]="student.emailId">
 					<div *ngIf="name.touched && name.invalid" class="alert alert-danger"> e-mail id is required </div>
 
 				</div><br>
@@ -91,34 +95,34 @@
 				</div><br>
 				<div class="form-group">
 					<label for="sex">Fee :</label>
-					<input #name="ngModel" required name="fee" id="fee" type="number" class="form-control" ngModel>
+					<input #name="ngModel" required name="fee" id="fee" type="number" class="form-control" [(ngModel)]="student.fee">
 					<div *ngIf="name.touched && name.invalid" class="alert alert-danger"> Total fee is required </div>
 				</div> <br>
 				<div class="form-group">
 					<label for="paid">Paid :</label>
-					<input #name="ngModel" required name="paid" id="paid" type="number" class="form-control" ngModel>
+					<input #name="ngModel" required name="paid" id="paid" type="number" class="form-control" [(ngModel)]="student.paid">
 					<div *ngIf="name.touched && name.invalid" class="alert alert-danger"> Paid amount is required </div>
 				</div> <br>
 				<div class="form-group">
 					<label for="due">Due :</label>
-					<input #name="ngModel" required name="due" id="due" type="number" class="form-control" ngModel>
+					<input #name="ngModel" required name="duefees" id="due" type="number" class="form-control" [(ngModel)]="student.duefees">
 					<div *ngIf="name.touched && name.invalid" class="alert alert-danger"> Due amount is required </div>
 				</div> <br>
 				<div class="form-group">
 					<label for="address">Address :</label>
 					<textarea #name="ngModel" required name="address" id="address" cols="30" rows="10"
-						class="form-control" ngModel></textarea>
+						class="form-control" [(ngModel)]="student.address"></textarea>
 					<div *ngIf="name.touched && name.invalid" class="alert alert-danger"> Address is required </div>
 				</div><br>
 				<div class="form-group">
 					<label for="contact">Contact :</label>
-					<input #name="ngModel" required name="contact" id="contact" type="number" class="form-control"
-						ngModel>
+					<input #name="ngModel" required name="contactno" id="contact" type="number" class="form-control"
+					[(ngModel)]="student.contactno">
 					<div *ngIf="name.touched && name.invalid" class="alert alert-danger"> Contact is required </div>
 
 				</div><br>
 				<!--<button class="btn btn-primary" type="submit">Update Student</button>*/-->
-				<input class="submit" type="submit" value="Submit" (click)="updateForm(update)">
+				<input class="submit" type="submit" value="Submit" (click)="onUpdate(update)">
 			</fieldset>
 		</form>
 

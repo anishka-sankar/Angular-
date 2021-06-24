@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AccountantService } from 'src/app/services/accountant.service';
 
 @Component({
   selector: 'app-search-student',
@@ -7,14 +8,26 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./search-student.component.css']
 })
 export class SearchStudentComponent implements OnInit {
-
-  constructor() { }
+  student:any
+  noresultsfound: boolean=false
+  constructor(private service:AccountantService) { }
 
   ngOnInit(): void {
   }
-  onSubmit(f: NgForm) {
-    console.log(f.value);  // { first: '', last: '' }
-    console.log(f.valid);  // false
+  search(f: NgForm) {
+
+    this.service.searchstudent(f.value.studentId).subscribe(response => {
+      if(response!=null){
+        this.noresultsfound=false
+        this.student=response
+      }
+      else{
+        this.noresultsfound=true
+        this.student=[]
+      }
+    }, error => {
+      console.log(error)
+    })
   }
 
 
