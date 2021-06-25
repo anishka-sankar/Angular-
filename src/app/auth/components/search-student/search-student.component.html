@@ -41,10 +41,16 @@
     </div>
   </nav>
 
+  <div class="bg-image" style="
+  background-image: url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+  height: 150vh; background-size : cover;">
+
   
 <div class="row">
     <div class="col-md-6 offset-md-3 mt-4">
 	<h1>Search Student </h1><br>
+
+
 
 <form #f="ngForm" >
     
@@ -71,4 +77,5 @@
 <div *ngIf="!noresultsfound">Gender : {{student.gender | json}}</div>
 </table>
  
+</div>
 </div>

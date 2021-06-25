@@ -44,6 +44,7 @@ export class EditStudentComponent implements OnInit {
   }
 
   onUpdate(update:NgForm){
+    console.log(update)
     this.service.updatestudent(update.value)
       .subscribe(response => {
         alert("Updated Successfully")

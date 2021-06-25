@@ -42,12 +42,15 @@
 </nav>
 
 
+<div class="bg-image" style="
+  background-image: url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+  height: 100vh; background-size : cover;">
 
 
 
 <h1>DueFee Students</h1>
 <form #dueFeeForm="ngForm">
-<table datatable [dtOptions]="dtOptions" class="row-border hover">
+<table datatable [dtOptions]="dtOptions" class="row-border hover" style="background-color: rgb(164, 172, 180);">
  
   <thead>
     <tr>
@@ -61,12 +64,11 @@
       <th>due</th>
       <th>Address</th>
       <th>Contact</th>
-      <th>Edit</th>
-      <th>Delete</th>
+
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let student of students">
+    <tr *ngFor="let student of students" style="background-color: rgb(201, 198, 198);">
       <td>{{ student?.studentId }}</td>
       <td>{{ student?.studentName}}</td>
       <td>{{ student?.emailId }}</td>
@@ -87,3 +89,4 @@
 
 </table>
 </form>
+</div>

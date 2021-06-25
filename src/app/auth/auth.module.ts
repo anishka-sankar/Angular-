@@ -24,6 +24,8 @@ import { EditStudentComponent } from './components/edit-student/edit-student.com
 //import { EditAccountantComponent } from './components/edit-accountant/edit-accountant.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
 import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
+import { EditAccountantComponent } from './components/edit-accountant/edit-accountant.component';
+import { DeleteAccountantComponent } from './components/delete-accountant/delete-accountant.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { DeleteStudentComponent } from './components/delete-student/delete-stude
     EditStudentComponent,
     SearchStudentComponent,
     DeleteStudentComponent,
+    EditAccountantComponent,
+    DeleteAccountantComponent,
     
   ],
   imports: [

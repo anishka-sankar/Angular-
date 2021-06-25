@@ -21,4 +21,14 @@ export class AdminService {
     return this.http.post(this.apiUrl + '/admin/addaccountant',accountant);
    
   }
+
+  updateaccountant(accountant: any){
+    return this.http.put(this.apiUrl + '/adminlogin/update/'+accountant.accountantId, accountant);
+  }
+
+  deleteaccountant(accountantId: number){
+    console.log(accountantId)
+    return this.http.delete(this.apiUrl + '/adminlogin/delete/' + accountantId,  {responseType: 'text'});
+  }
+
 }

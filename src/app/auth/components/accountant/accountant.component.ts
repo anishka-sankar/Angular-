@@ -21,9 +21,9 @@ export class AccountantComponent implements OnInit {
   onSubmit(f: NgForm) {
     this.accountantService.getAccountantId(f.value.emailId, f.value.password).subscribe(response => {
       console.log(response)
-      this.data =response;
-      console.log(this.data.accountantId)
+      //console.log(this.data.accountantId)
       if(response != null){
+        this.data =response;
         this.errorMsg=false
         this.router.navigateByUrl("/accountant-home")
        
@@ -31,6 +31,8 @@ export class AccountantComponent implements OnInit {
       else{
         this.errorMsg=true
       }
+    }, error => {
+      this.errorMsg=true
     })
   }
 }
